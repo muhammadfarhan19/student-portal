@@ -12,6 +12,7 @@ import {
   Flex,
   Image,
 } from "@chakra-ui/react";
+import Footer from "../components/Footer";
 
 const EditStudent = () => {
   const { id } = useParams();
@@ -148,6 +149,7 @@ const EditStudent = () => {
               </FormControl>
             </Flex>
           </Center>
+          <Footer />
         </Container>
         // </>
       )}

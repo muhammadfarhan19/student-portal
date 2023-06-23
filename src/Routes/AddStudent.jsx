@@ -13,6 +13,7 @@ import {
   Select,
   Button,
 } from "@chakra-ui/react";
+import Footer from "../components/Footer";
 // import Footer from "../components/Footer";
 // import { addStudent } from "../api";
 
@@ -277,6 +278,7 @@ const AddStudent = () => {
           </Button>
         </form>
       </Box>
+      <Footer />
       {/* </Center> */}
     </Container>
   );
