@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <Center height='100vh'>
       {/* <Link to="student"> */}
-        <Button alignContent='center' onClick={() => navigate('/student')}>all students</Button>
+        <Button data-testid="student-btn" alignContent='center' onClick={() => navigate('/student')}>all students</Button>
       {/* </Link> */}
     </Center>
   );

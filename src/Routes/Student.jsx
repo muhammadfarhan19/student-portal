@@ -63,7 +63,7 @@ const Student = () => {
   return (
     <>
       {isLoading ? (
-        <p>Loading ....</p>
+        <p>Loading ...</p>
       ) : (
         <Container
           maxWidth="100%"
@@ -75,6 +75,7 @@ const Student = () => {
           {/* <Center flexDirection="column"> */}
             <Select
               maxWidth="100%"
+              data-testid="filter"
               onChange={(e) => setChoosenFaculty(e.target.value)}
             >
               <option value="All">All</option>

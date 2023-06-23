@@ -59,19 +59,20 @@ const EditStudent = () => {
   return (
     <>
       {isLoading ? (
-        <p>Loading ....</p>
+        <p>Loading ...</p>
       ) : (
+        // <>
         <Container
           maxWidth="100%"
           maxHeight="100vh"
           display="row"
           p="0 100px 100px"
         >
-          <Center flexDirection="column">
+          <Center flexDirection="column" maxH="100%" bg="green.100">
             <Navbar />
             <Flex>
               <Box>
-                <Image src={student.profilePicture} alt={student.fullname} />
+                <img src={student.profilePicture} alt={student.fullname} />
               </Box>
               <FormControl gap="10px" onSubmit={handleSaveBtn}>
                 <Input
@@ -79,23 +80,26 @@ const EditStudent = () => {
                   m={2}
                   value={student.fullname || ""}
                   onChange={handleInputChange}
-                  placeholder="Full Name"
+                  // placeholder="Full Name"
+                  data-testid="name"
                 />
                 <Input
                   name="address"
                   m={2}
                   value={student.address || ""}
                   onChange={handleInputChange}
-                  placeholder="Full Name"
+                  data-testid="address"
+                  // placeholder="Full Name"
                 />
                 <Input
                   name="birthdate"
                   m={2}
                   value={student.birthDate || ""}
                   onChange={handleInputChange}
-                  placeholder="Full Name"
+                  data-testid="date"
+                  // placeholder="Full Name"
                 />
-                <Select m={2}>
+                <Select m={2} data-testid="gender">
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
                 </Select>
@@ -104,16 +108,17 @@ const EditStudent = () => {
                   m={2}
                   value={student.phoneNumber || ""}
                   onChange={handleInputChange}
-                  placeholder="Full Name"
+                  data-testid="phoneNumber"
+                  // placeholder="Full Name"
                 />
                 <Input
                   name="faculty"
                   m={2}
                   value={student.faculty || ""}
                   onChange={handleInputChange}
-                  placeholder="Faculty"
+                  // placeholder="Faculty"
                 />
-                <Select m={2}>
+                <Select m={2} data-testid="prody">
                   <option value="Ekonomi">Ekonomi</option>
                   <option value="Manajemen">Manajemen</option>
                   <option value="Akuntansi">Akuntansi</option>
@@ -138,11 +143,13 @@ const EditStudent = () => {
                   colorScheme="teal"
                   mt={4}
                   onClick={handleSaveBtn}
+                  data-testid="edit-btn"
                 />
               </FormControl>
             </Flex>
           </Center>
         </Container>
+        // </>
       )}
     </>
   );

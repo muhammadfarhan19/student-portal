@@ -156,10 +156,27 @@ const AddStudent = () => {
     //   </Center>
     //   <Footer />
     // </Container>
-    <Container bg="blue.100" maxW="100%" height="100vh" paddingTop={20} textAlign='center' >
+    <Container
+      // bg="blue.100"
+      maxW="100%"
+      height="100vh"
+      paddingTop={20}
+      textAlign="center"
+    >
       {/* <Center> */}
-      <Text fontSize="24px" fontWeight='bold' >Add student</Text>
-      <Box maxWidth="700px" mx="auto" bg="green.200" marginTop={8}>
+      <Text fontSize="24px" fontWeight="bold">
+        Add student
+      </Text>
+      <Box
+        maxWidth="750px"
+        mx="auto"
+        marginTop={8}
+        borderRadius="lg"
+        padding={4}
+        boxShadow="lg"
+        rounded="md"
+        bg="white"
+      >
         <form onSubmit={handleSubmit}>
           <Grid templateColumns="1fr" gap={4} mb={4}>
             <FormControl>
@@ -247,7 +264,15 @@ const AddStudent = () => {
             </FormControl>
           </Grid>
 
-          <Button colorScheme="blue" type="submit"  onClick={handleSubmit} data-testid="add-btn">
+          <Button
+            colorScheme="blue"
+            type="submit"
+            onClick={handleSubmit}
+            data-testid="add-btn"
+            marginTop={4}
+            // left=
+            // width='00px'
+          >
             Submit
           </Button>
         </form>

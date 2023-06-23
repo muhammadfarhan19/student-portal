@@ -1,5 +1,5 @@
 // TODO: answer here
-import { Center, Button } from "@chakra-ui/react";
+import { Center, Button, Text } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
 const NotFound = () => {
@@ -7,6 +7,7 @@ const NotFound = () => {
 
   return (
     <Center height="100vh">
+      <Text>Not Found</Text>
       <Button alignContent="center" onClick={() => navigate(-1)}>
         back
       </Button>

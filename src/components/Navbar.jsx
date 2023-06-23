@@ -17,16 +17,17 @@ const NavBar = () => {
         fontSize="xl"
         fontWeight="bold"
         color="teal"
+        data-testid="student-btn"
       >
         Student Portal
       </ChakraLink>
       <Spacer />
       <Box>
         <ChakraLink as={NavLink} to="/student" mr="1rem">
-          <Button>All Students</Button>
+          <Button data-testid="student-page">All Students</Button>
         </ChakraLink>
         <ChakraLink as={NavLink} to="/add">
-          <Button>Add Student</Button>
+          <Button data-testid="add-page">Add Student</Button>
         </ChakraLink>
       </Box>
     </Flex>
