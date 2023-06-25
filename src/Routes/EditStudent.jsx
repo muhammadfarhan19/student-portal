@@ -5,9 +5,10 @@ import {
   Container,
   Box,
   FormControl,
+  FormLabel,
   Input,
-  //   Button,
-  Center,
+  Button,
+  Grid,
   Select,
   Flex,
   Image,
@@ -90,38 +91,96 @@ const EditStudent = () => {
       ) : (
         <Container
           maxWidth="100%"
-          maxHeight="100vh"
-          display="row"
-          p="0 100px 100px"
+          height="100vh"
+          p="0 100px"
+          display="flex"
+          flexDirection="column"
+          justifyContent="space-between"
         >
-          <Center flexDirection="column" maxH="100%" bg="green.100">
-            <Navbar />
-            <Flex>
-              <Box>
-                <img src={student.profilePicture} alt={student.fullname} />
-              </Box>
-              <FormControl gap="10px" onSubmit={handleSaveBtn}>
-                <Input
-                  name="fullname"
-                  m={2}
-                  value={student.fullname || ""}
-                  onChange={handleInputChange}
-                  data-testid="name"
-                />
-                <Input
-                  name="address"
-                  m={2}
-                  value={student.address || ""}
-                  onChange={handleInputChange}
-                  data-testid="address"
-                />
-                <Input
-                  name="birthDate"
-                  m={2}
-                  value={student.birthDate || ""}
-                  onChange={handleInputChange}
-                  data-testid="date"
-                />
+          {/* <Center flexDirection="column" maxH="100%" bg="green.100"> */}
+          <Navbar />
+          <Flex>
+            <Box
+              width="750px"
+              mx="auto"
+              bgColor="green.100"
+              borderRadius="lg"
+              boxShadow="lg"
+              rounded="md"
+              bg="white"
+              padding={6}
+            >
+              <Flex gap={4} marginBottom={4}>
+                <Box padding={2}>
+                  <img
+                    mx="auto"
+                    src={student.profilePicture}
+                    alt={student.fullname}
+                  />
+                </Box>
+                <Box width="150px">
+                  <p>Nama</p>
+                  <p>Alamat</p>
+                  <p>Nomor HP</p>
+                  <p>Tanggal lahir</p>
+                  <p>Jenis kelamin</p>
+                  <p>Fakultas</p>
+                  <p>Program Studi</p>
+                </Box>
+                <Box flex="1">
+                  <p>: {student.fullname}</p>
+                  <p>: {student.address}</p>
+                  <p>: {student.phoneNumber}</p>
+                  <p>: {student.birthDate}</p>
+                  <p>: {student.gender}</p>
+                  <p>: {student.faculty}</p>
+                  <p>: {student.programStudy}</p>
+                </Box>
+              </Flex>
+              <form onSubmit={handleSaveBtn}>
+                <Grid templateColumns="1fr" gap={4}>
+                  <FormControl>
+                    <Input
+                      name="fullname"
+                      m={2}
+                      value={student.fullname || ""}
+                      onChange={handleInputChange}
+                      data-testid="name"
+                    />
+                  </FormControl>
+                </Grid>
+                <Grid templateColumns="1fr" gap={4}>
+                  <FormControl>
+                    <Input
+                      name="address"
+                      m={2}
+                      value={student.address || ""}
+                      onChange={handleInputChange}
+                      data-testid="address"
+                    />
+                  </FormControl>
+                </Grid>
+                <Grid templateColumns="repeat(2, 1fr)" gap={4}>
+                  <FormControl>
+                    <Input
+                      name="phoneNumber"
+                      m={2}
+                      value={student.phoneNumber || ""}
+                      onChange={handleInputChange}
+                      data-testid="phoneNumber"
+                    />
+                  </FormControl>
+                  <FormControl>
+                    <Input
+                      name="birthDate"
+                      m={2}
+                      value={student.birthDate || ""}
+                      onChange={handleInputChange}
+                      data-testid="date"
+                    />
+                  </FormControl>
+                </Grid>
+
                 <Select
                   m={2}
                   data-testid="gender"
@@ -131,13 +190,7 @@ const EditStudent = () => {
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
                 </Select>
-                <Input
-                  name="phoneNumber"
-                  m={2}
-                  value={student.phoneNumber || ""}
-                  onChange={handleInputChange}
-                  data-testid="phoneNumber"
-                />
+
                 <Input
                   // name="faculty"
                   m={2}
@@ -169,20 +222,22 @@ const EditStudent = () => {
                   <option value="Fisika">Fisika</option>
                   <option value="Informatika">Informatika</option>
                 </Select>
-                <Input
-                  type="submit"
-                  value="Save"
+                <Button
                   colorScheme="teal"
-                  mt={4}
+                  type="submit"
                   onClick={handleSaveBtn}
                   data-testid="edit-btn"
-                />
-              </FormControl>
-            </Flex>
-          </Center>
+                  margin={2}
+                >
+                  Save
+                </Button>
+              </form>
+            </Box>
+          </Flex>
+          {/* </Center> */}
+          <Footer />
         </Container>
       )}
-      <Footer />
     </>
   );
 };

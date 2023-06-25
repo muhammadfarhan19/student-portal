@@ -13,7 +13,6 @@ import {
   Td,
   Select,
   Button,
-  Center,
   TableContainer,
 } from "@chakra-ui/react";
 import Footer from "../components/Footer";
@@ -66,12 +65,7 @@ const Student = () => {
         <p>Loading ...</p>
       ) : (
         // <>
-        <Container
-          maxWidth="100%"
-          maxHeight="100vh"
-          display="row"
-          p="0 100px 100px"
-        >
+        <Container maxWidth="100%" maxHeight="100vh" p="0 100px">
           <Navbar />
           <Select
             maxWidth="100%"
@@ -88,10 +82,24 @@ const Student = () => {
               Fakultas Teknologi Informasi dan Sains
             </option>
           </Select>
-          <TableContainer width="100%" maxHeight="80vh" overflowY="scroll">
-            <Table variant="simple" colorScheme="teal" maxH="100vh">
+          <TableContainer
+            width="100%"
+            maxHeight="calc(100vh - 200px)"
+            overflowY="scroll"
+            marginBottom="16px"
+          >
+            <Table colorScheme="teal" maxH="100vh">
               <Thead>
-                <Tr>
+                <Tr
+                  style={{
+                    position: "sticky",
+                    top: 0,
+                    zIndex: 1,
+                    background: "white",
+                    borderBottom: "1px solid teal"
+                  }}
+                  boxShadow='sm'
+                >
                   <Th>No</Th>
                   <Th>Fullname</Th>
                   <Th>Faculty</Th>
@@ -103,7 +111,8 @@ const Student = () => {
                 {filtered?.map((student, index) => {
                   return (
                     <Tr className="student-data-row" key={index}>
-                      <Td>{student.id}</Td>
+                      {/* <Td>{student.id}</Td> */}
+                      <Td>{index + 1}</Td>
                       <Td>
                         <Link to={`/student/${student.id}`}>
                           {student.fullname}
@@ -126,10 +135,10 @@ const Student = () => {
               </Tbody>
             </Table>
           </TableContainer>
+          <Footer />
         </Container>
         // </>
       )}
-      <Footer />
     </>
   );
 };

@@ -1,41 +1,8 @@
 {
   "student": [
     {
-      "id": 7,
-      "fullname": "David Lee",
-      "profilePicture": "https://randomuser.me/api/portraits/men/7.jpg",
-      "address": "Jakarta, Indonesia",
-      "birthDate": "1995-07-17",
-      "gender": "Male",
-      "phoneNumber": "+6282222222222",
-      "faculty": "Fakultas Teknologi Informasi dan Sains",
-      "programStudy": "Fisika"
-    },
-    {
-      "id": 9,
-      "fullname": "Budi Santoso",
-      "profilePicture": "https://randomuser.me/api/portraits/men/9.jpg",
-      "address": "Yogyakarta, Indonesia",
-      "birthDate": "1994-04-09",
-      "gender": "Male",
-      "phoneNumber": "+6284444444444",
-      "faculty": "Fakultas Ekonomi",
-      "programStudy": "Manajemen"
-    },
-    {
-      "id": 10,
-      "fullname": "Rina Amalia",
-      "profilePicture": "https://randomuser.me/api/portraits/women/10.jpg",
-      "address": "Medan, Indonesia",
-      "birthDate": "1997-11-30",
-      "gender": "Female",
-      "phoneNumber": "+6286666666666",
-      "faculty": "Fakultas Ilmu Sosial dan Politik",
-      "programStudy": "Hubungan Internasional"
-    },
-    {
       "id": 11,
-      "fullname": "Andre Wijaya",
+      "fullname": "Andre W",
       "profilePicture": "https://randomuser.me/api/portraits/men/11.jpg",
       "address": "Surabaya, Indonesia",
       "birthDate": "1998-02-18",

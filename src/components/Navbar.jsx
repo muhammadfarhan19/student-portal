@@ -44,7 +44,7 @@ const NavBar = () => {
 
   return (
     <>
-      <Flex alignItems={"center"} padding={"1rem"} width={"1005"}>
+      <Flex alignItems={"center"} padding={"1rem"}>
         <Link>
           <Button data-testid="home-page" onClick={() => navigate("/")}>
             Student Portal

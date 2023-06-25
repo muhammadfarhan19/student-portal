@@ -6,13 +6,13 @@ const Footer = () => {
     <Box
       className="footer"
       textAlign="center"
-      padding={4}
       display="flex"
       justifyContent="center"
       gap={8}
-      marginTop={8}
-      alignSelf="end"
-      marginBottom={2}
+      padding='24px'
+      // fontSize='17px'
+      // alignSelf="end"
+      // bg='green.100'
     >
       <p className="studentName">Muhammad Farhan Hamidie</p>
       <p className="studentId">FE4800778</p>
