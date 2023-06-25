@@ -119,13 +119,13 @@ const EditStudent = () => {
                   />
                 </Box>
                 <Box width="150px">
-                  <p>Nama</p>
-                  <p>Alamat</p>
-                  <p>Nomor HP</p>
-                  <p>Tanggal lahir</p>
-                  <p>Jenis kelamin</p>
-                  <p>Fakultas</p>
-                  <p>Program Studi</p>
+                  <p>Name</p>
+                  <p>Address</p>
+                  <p>Phonenumber</p>
+                  <p>Birthdate</p>
+                  <p>Gender</p>
+                  <p>Faculty</p>
+                  <p>Study Program</p>
                 </Box>
                 <Box flex="1">
                   <p>: {student.fullname}</p>
