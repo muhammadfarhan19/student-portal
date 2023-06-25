@@ -30,31 +30,26 @@ const AddStudent = () => {
   const [programStudy, setProgramStudy] = useState("Ekonomi");
 
   const getFaculty = (programStudy) => {
-    let faculty = "";
+    // let faculty = "";
     switch (programStudy) {
       case "Ekonomi":
       case "Manajemen":
       case "Akuntansi":
-        faculty = "Fakultas Ekonomi";
-        break;
+        return "Fakultas Ekonomi";
       case "Administrasi Publik":
       case "Administrasi Bisnis":
       case "Hubungan Internasional":
-        faculty = "Fakultas Ilmu Sosial dan Politik";
-        break;
+        return "Fakultas Ilmu Sosial dan Politik";
       case "Teknik Sipil":
       case "Arsitektur":
-        faculty = "Fakultas Teknik";
-        break;
+        return "Fakultas Teknik";
       case "Matematika":
       case "Fisika":
       case "Informatika":
-        faculty = "Fakultas Teknologi Informasi dan Sains";
-        break;
+        return "Fakultas Teknologi Informasi dan Sains";
       default:
-        break;
     }
-    return faculty;
+    // return faculty;
   };
   const faculty = getFaculty(programStudy);
 
@@ -211,8 +206,6 @@ const AddStudent = () => {
               onClick={handleSubmit}
               data-testid="add-btn"
               marginTop={4}
-              // left=
-              // width='00px'
             >
               Submit
             </Button>

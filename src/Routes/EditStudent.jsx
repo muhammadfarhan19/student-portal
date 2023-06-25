@@ -90,13 +90,18 @@ const EditStudent = () => {
                   data-testid="address"
                 />
                 <Input
-                  name="birthdate"
+                  name="birthDate"
                   m={2}
                   value={student.birthDate || ""}
                   onChange={handleInputChange}
                   data-testid="date"
                 />
-                <Select m={2} data-testid="gender">
+                <Select
+                  m={2}
+                  data-testid="gender"
+                  onChange={handleInputChange}
+                  name="gender"
+                >
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
                 </Select>
@@ -108,12 +113,13 @@ const EditStudent = () => {
                   data-testid="phoneNumber"
                 />
                 <Input
-                  name="faculty"
+                  // name="faculty"
                   m={2}
                   value={student.faculty || ""}
                   onChange={handleInputChange}
+                  // data-testid="faculty"
                 />
-                <Select m={2} data-testid="prody">
+                <Select m={2} data-testid="prody" onChange={handleInputChange} >
                   <option value="Ekonomi">Ekonomi</option>
                   <option value="Manajemen">Manajemen</option>
                   <option value="Akuntansi">Akuntansi</option>
