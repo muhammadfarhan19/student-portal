@@ -151,7 +151,7 @@ const AddStudent = () => {
               <FormLabel>Birthdate</FormLabel>
               <Input
                 value={birthDate?.value}
-                type="text"
+                type="date"
                 onChange={(e) => setBirthdate(e.target.value)}
                 data-testid="date"
               />

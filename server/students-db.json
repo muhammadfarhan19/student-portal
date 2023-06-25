@@ -1,17 +1,6 @@
 {
   "student": [
     {
-      "id": 11,
-      "fullname": "Andre W",
-      "profilePicture": "https://randomuser.me/api/portraits/men/11.jpg",
-      "address": "Surabaya, Indonesia",
-      "birthDate": "1998-02-18",
-      "gender": "Male",
-      "phoneNumber": "+6287777777777",
-      "faculty": "Fakultas Teknik",
-      "programStudy": "Arsitektur"
-    },
-    {
       "id": 12,
       "fullname": "Dewi Susanti",
       "profilePicture": "https://randomuser.me/api/portraits/women/12.jpg",
@@ -178,14 +167,14 @@
     },
     {
       "fullname": "Muhammad Farhan Hamidie",
-      "profilePicture": "rrr",
+      "profilePicture": "http://placeholder.ocm/150x150",
       "address": "paponan",
-      "phoneNumber": "89098",
-      "birthdate": "2001-12-03",
+      "phoneNumber": "0000",
+      "birthDate": "2001-12-03",
       "gender": "Male",
-      "programStudy": "Teknik Sipil",
-      "faculty": "Fakultas Teknik",
-      "id": 32
+      "programStudy": "Ekonomi",
+      "faculty": "Fakultas Ekonomi",
+      "id": 28
     }
   ]
 }
