@@ -18,7 +18,7 @@ const Home = () => {
           rounded="md"
           bg="white"
           width="600px"
-          padding='40px 15px'
+          padding='30px 15px'
           gap={6}
           borderRadius="lg"
         >
