@@ -62,7 +62,6 @@ const EditStudent = () => {
       {isLoading ? (
         <p>Loading ...</p>
       ) : (
-        // <>
         <Container
           maxWidth="100%"
           maxHeight="100vh"
@@ -81,7 +80,6 @@ const EditStudent = () => {
                   m={2}
                   value={student.fullname || ""}
                   onChange={handleInputChange}
-                  // placeholder="Full Name"
                   data-testid="name"
                 />
                 <Input
@@ -90,7 +88,6 @@ const EditStudent = () => {
                   value={student.address || ""}
                   onChange={handleInputChange}
                   data-testid="address"
-                  // placeholder="Full Name"
                 />
                 <Input
                   name="birthdate"
@@ -98,26 +95,23 @@ const EditStudent = () => {
                   value={student.birthDate || ""}
                   onChange={handleInputChange}
                   data-testid="date"
-                  // placeholder="Full Name"
                 />
                 <Select m={2} data-testid="gender">
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
                 </Select>
                 <Input
-                  name="phone_number"
+                  name="phoneNumber"
                   m={2}
                   value={student.phoneNumber || ""}
                   onChange={handleInputChange}
                   data-testid="phoneNumber"
-                  // placeholder="Full Name"
                 />
                 <Input
                   name="faculty"
                   m={2}
                   value={student.faculty || ""}
                   onChange={handleInputChange}
-                  // placeholder="Faculty"
                 />
                 <Select m={2} data-testid="prody">
                   <option value="Ekonomi">Ekonomi</option>
@@ -149,10 +143,9 @@ const EditStudent = () => {
               </FormControl>
             </Flex>
           </Center>
-          <Footer />
         </Container>
-        // </>
       )}
+      <Footer />
     </>
   );
 };

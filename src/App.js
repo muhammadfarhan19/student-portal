@@ -8,25 +8,9 @@ import EditStudent from "./Routes/EditStudent";
 import AddStudent from "./Routes/AddStudent";
 import NotFound from "./Routes/NotFound";
 
-export const theme = extendTheme({
-  styles: {
-    global: {
-      "a:hover": {
-        textDecoration: "none",
-      },
-    },
-  },
-});
 
 const App = () => {
   return (
-    // <>
-    //   {/* <h1>test</h1> */}
-    //   {/* <Home /> */}
-    //   {/* <Student /> */}
-    //   {/* <EditStudent /> */}
-    //   {/* <AddStudent /> */}
-    // </>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/student" element={<Student />} />
@@ -38,3 +22,13 @@ const App = () => {
 };
 
 export default App;
+
+  // export const theme = extendTheme({
+  //   styles: {
+  //     global: {
+  //       "a:hover": {
+  //         textDecoration: "none",
+  //       },
+  //     },
+  //   },
+  // });

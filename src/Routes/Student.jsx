@@ -65,6 +65,7 @@ const Student = () => {
       {isLoading ? (
         <p>Loading ...</p>
       ) : (
+        // <>
         <Container
           maxWidth="100%"
           maxHeight="100vh"
@@ -125,9 +126,10 @@ const Student = () => {
               </Tbody>
             </Table>
           </TableContainer>
-          <Footer />
         </Container>
+        // </>
       )}
+      <Footer />
     </>
   );
 };
