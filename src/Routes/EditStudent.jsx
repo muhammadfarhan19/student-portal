@@ -121,7 +121,7 @@ const EditStudent = () => {
                 <Box width="150px">
                   <p>Name</p>
                   <p>Address</p>
-                  <p>Phonenumber</p>
+                  <p>Phone number</p>
                   <p>Birthdate</p>
                   <p>Gender</p>
                   <p>Faculty</p>
