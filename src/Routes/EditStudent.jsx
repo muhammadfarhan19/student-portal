@@ -35,6 +35,29 @@ const EditStudent = () => {
     fetchData();
   }, []);
 
+  const getFaculty = (programStudy) => {
+    // let faculty = "";
+    switch (programStudy) {
+      case "Ekonomi":
+      case "Manajemen":
+      case "Akuntansi":
+        return "Fakultas Ekonomi";
+      case "Administrasi Publik":
+      case "Administrasi Bisnis":
+      case "Hubungan Internasional":
+        return "Fakultas Ilmu Sosial dan Politik";
+      case "Teknik Sipil":
+      case "Arsitektur":
+        return "Fakultas Teknik";
+      case "Matematika":
+      case "Fisika":
+      case "Informatika":
+        return "Fakultas Teknologi Informasi dan Sains";
+      default:
+    }
+    // return faculty;
+  };
+
   const handleInputChange = (e) => {
     setStudent({
       ...student,
@@ -49,7 +72,10 @@ const EditStudent = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(student),
+        body: JSON.stringify({
+          ...student,
+          faculty: getFaculty(student.programStudy),
+        }),
       });
       navigate("/student");
     } catch (error) {
@@ -119,7 +145,12 @@ const EditStudent = () => {
                   onChange={handleInputChange}
                   // data-testid="faculty"
                 />
-                <Select m={2} data-testid="prody" onChange={handleInputChange} >
+                <Select
+                  m={2}
+                  data-testid="prody"
+                  name="programStudy"
+                  onChange={handleInputChange}
+                >
                   <option value="Ekonomi">Ekonomi</option>
                   <option value="Manajemen">Manajemen</option>
                   <option value="Akuntansi">Akuntansi</option>
